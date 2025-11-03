@@ -1,39 +1,97 @@
-*{
-    background-color:black;
-    color: white;
-    border: 10px;
-    margin: 10px;
+* {
+  background-color: black;
+  color: white;
+  margin: 10px;
+  box-sizing: border-box;
 }
-p,ul{
-    font-size: large;
-    display: block;
-    margin: 100px;
-    margin-bottom: 0px;
-    border: 2px solid white;
-    padding: 8px;
-    border-radius: 8px;
+
+.con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 10px;
 }
-ul{
-    margin-top: 15px;
+
+img {
+  border-radius: 8px;
+  display: block;
+  height: 400px;
+  width: 400px;
+  border: 3px solid white;
+  object-fit: cover;
 }
-img{
-    border-radius: 8px ;
-    display: block;
-    margin: auto;
-    height: 400px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid white;
+
+/* FAQ Styling */
+.faq-item {
+  width: 100%;
+  margin-top: 20px;
+  border-top: 2px solid white;
+  padding-top: 10px;
 }
-button{
-    background-color: white;
-    color: black;
-    font-size: 15px;
-    border-radius: 8px;
-    padding: 10px 20px;
-    margin-left: 100px;
-    margin-top: 40px;
-    cursor: pointer;
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  padding: 0 10px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px; /* enough to show text */
+  opacity: 1;
+}
+
+.faq-item.active .arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer p {
+  font-size: large;
+  border: 2px solid white;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+button {
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 40px auto;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: gray;
+  color: white;
 }
