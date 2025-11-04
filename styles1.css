@@ -26,15 +26,14 @@ img {
     object-fit: cover;
 }
 
-/* FAQ Styling */
-.faq-item {
+.container {
     width: 100%;
     margin-top: 20px;
     border-top: 2px solid white;
     padding-top: 10px;
 }
 
-.faq-question {
+.con-question {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +45,7 @@ img {
     transition: background 0.3s ease;
 }
 
-.faq-question:hover {
+.con-question:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -54,7 +53,7 @@ img {
     transition: transform 0.3s ease;
 }
 
-.faq-answer {
+.con-answer {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -62,17 +61,16 @@ img {
     padding: 0 10px;
 }
 
-.faq-item.active .faq-answer {
+.container.active .con-answer {
     max-height: 500px;
-    /* enough to show text */
     opacity: 1;
 }
 
-.faq-item.active .arrow {
+.container.active .arrow {
     transform: rotate(180deg);
 }
 
-.faq-answer p {
+.con-answer p {
     font-size: large;
     border: 2px solid white;
     padding: 8px;
@@ -89,7 +87,6 @@ button {
     margin: 40px auto;
     display: block;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
